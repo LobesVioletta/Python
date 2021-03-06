@@ -1,0 +1,9 @@
+def setup():
+    size(500,500)
+    frameRate(5)
+def draw():
+    background(0)
+    for x in range(100):
+         circle( random(0,500), random(0,500), random(0,50))
+         fill(random(0,255))
+     

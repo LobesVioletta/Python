@@ -1,0 +1,31 @@
+def vetka():
+     line(0,0,100,0)
+     line(70,0,90,20)
+     line(70,0,90,-20)
+     line(30,0,50,20)
+     line(30,0,50,-20)
+def sneginka(x,y,scale):
+       
+      for i in range(8):
+          vetka()
+          rotate(radians(45))
+x=200
+y=200     
+speed=5
+ 
+def setup():
+    size(500,500)
+    background(255)
+def draw():
+    global x,y,scale,speed 
+    translate(250,250)
+    sneginka (250,250,scale(2))
+    if keyPressed:
+        if keyCode==RIGHT:
+            x+=speed
+        if keyCode==LEFT:
+            x-=speed
+        if keyCode==UP:
+            y-=speed
+        if keyCode==DOWN:
+            y+=speed   

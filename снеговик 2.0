@@ -1,0 +1,23 @@
+def snowman(x,y):
+    circle(x,y-50,50)
+    circle(x,y,75)
+    circle(x,y+50,100)
+speed=5 
+x = 200
+y = 200
+def setup():
+    size(500,500)
+    background(0)
+def draw():
+    global x,y,speed
+    snowman(x,y)
+    if keyPressed:
+        if keyCode==RIGHT:
+            x+=speed
+        if keyCode==LEFT:
+            x-=speed
+        if keyCode==UP:
+            y-=speed
+        if keyCode==DOWN:
+            y+=speed   
+     

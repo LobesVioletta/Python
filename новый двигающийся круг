@@ -1,0 +1,33 @@
+class Circle:
+    def __init__(self , x , y):
+        self.x = x
+        self.y = y
+    def draw_(self):
+        circle( self.x , self.y , 50)
+
+def setup():
+    global circ
+    circ = Circle(200,300)
+    size(400,400)
+    frameRate(100)
+    background(255)
+def keyPressed():
+    if keyCode==RIGHT:
+        circ.x+=5
+    elif keyCode==LEFT:
+        circ.x-=5
+    if keyCode==UP:
+        circ.y-=5
+    elif keyCode==DOWN:
+        circ.y+=5
+def draw():
+    circ.draw_()
+    if mouseButton==RIGHT:
+        circ.x+=5
+    elif  mouseButton==LEFT:
+        circ.x-=5
+    if mouseButton==UP:
+        circ.y-=5
+    elif  mouseButton==DOWN:
+        circ.y+=5
+        

@@ -1,0 +1,39 @@
+speed=[random(2,6),random(2,6),random(2,6),random(2,6)]
+Rus=0
+Ger=0
+Fra=0
+Usa=0
+def setup():
+    size(700,500)
+    background(175)
+    frameRate(1)
+    textSize(30)
+def draw():
+    global Rus,Ger,Fra,Usa
+    background(0)
+    
+    Rus=Rus+speed[0]
+    rect(0,300,Rus,40)
+    Ger=Ger+speed[1]
+    rect(0,341,Ger,40)
+    Fra=Fra+speed[2]
+    rect(0,382,Fra,40)
+    Usa=Usa+speed[3]
+    rect(0,423,Usa,40)
+    fill(0)
+    text('1',5,335)
+    text('2',5,375)
+    text('3',5,415)
+    text('4',5,460)
+    fill(255)
+    text("1.Russia-",10,50)
+    text("2.Germany-",10,90)
+    text("3.France-",10,130)
+    text("4.USA-",10,170)
+    text("All-",10,210)
+    text(int(Rus),150,50)
+    text(int(Ger),180,90)
+    text(int(Fra),150,130)
+    text(int(Usa),120,170)
+    text(int(Rus+Ger+Fra+Usa),65,210)
+    text("Day ",10,245)

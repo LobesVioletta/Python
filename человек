@@ -1,0 +1,9 @@
+def setup():
+    size(500,500)
+    frameRate(5)
+    background(0)
+def draw():
+   img = loadImage("chel.png")
+   imageMode(CENTER)
+   image(img ,250,250,random(1,500),random(1,500))
+    

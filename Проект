@@ -1,0 +1,44 @@
+class Food:
+    def __init__(self):
+        self.x=random(0,500)
+        self.y=random(0,500)
+    def draw_(self):
+        square(self.x,self.y,5)
+    def move(self,x,y):
+        self.x=x
+        self.y=y
+food=Food()
+class Snake:
+    def __init__(self):
+        self.x = 250
+        self.y = 250
+    def draw_(self):
+        square(self.x,self.y,10)
+    def move(self, x,y):
+        self.x+=x
+        self.y+=y
+snake = Snake()
+def setup():
+    size(500,500)
+def draw():
+    global snake,food
+    background(0)
+    food.draw_()
+    snake.draw_()
+    if keyPressed:
+        if keyCode==UP:
+            snake.y-=5
+        elif keyCode==DOWN:
+            snake.y+=5
+        if keyCode==LEFT:
+            snake.x-=5
+        elif keyCode==RIGHT:
+            snake.x+=5
+    if snake.x+10 > food.x and snake.x+10 < food.x + 5 and snake.y+10 > food.y and snake.y+10 < food.y + 5:
+        print(1)
+    if snake.x+10 > food.x and snake.x+10 < food.x + 5 and snake.y > food.y and snake.y < food.y + 5:
+         print(1) 
+    if snake.x  > food.x and snake.x  < food.x + 5 and snake.y  > food.y and snake.y  < food.y + 5:
+        print(1)
+    if snake.x  > food.x and snake.x  < food.x + 5 and snake.y > food.y and snake.y < food.y + 5:
+         print(1)      

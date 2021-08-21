@@ -1,0 +1,10 @@
+""" 
+"""import cv2 as cv
+img= cv.imread('/home/user/Рабочий стол/2')
+hsv=cv.cvtColor(img,cv.COLOR_BGR2HSV)
+cv.imshow("RGB image",img)
+cv.waitKey(0)
+cv.imshow("HSV image",hsv)
+cv.waitKey(0)
+res_img=cv.resize(img,(200,200),cv.INTER_NEAREST)
+cv.destrovAllWindows()

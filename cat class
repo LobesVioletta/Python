@@ -1,0 +1,19 @@
+"""
+Class Cat():
+    name=''
+    color=''
+    weight=0
+    def __init__(self,name,color,weight):
+        self.name=name
+        self.color=color
+        self.weight=weight
+
+    def get_name(self):
+        return name
+    def set_name(self,your_name):
+        self.name= your_name
+
+cat=Cat('Barsik', 'brown', 3)
+cat.set_name("Bak")
+print(get_name())
+"""

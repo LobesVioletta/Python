@@ -1,0 +1,29 @@
+"""
+s='pythonist'
+dic=dict()
+x=0
+for i in range(len(s)):
+    for z in s:
+        if z in s[1]:
+            x+=1
+    dic[s[i]]=x
+    x=0
+print(dic)
+"""
+"""
+with open('/home/user/Рабочий стол/мамка/txt') as f:
+    d = {}
+    a = f.readlines()
+    for i in range(len(a)):
+        if a[i] == '\n':
+            continue
+        else:
+            a[i] = a[i].strip()
+            b = a[i].split(':')
+            try:
+                b[1] = int(b[1])
+            except ValueError:
+                pass
+            d[b[0]] = b[1]
+print(d)
+"""

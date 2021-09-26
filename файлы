@@ -1,0 +1,4 @@
+f=open("LVA.txt","w")
+a=input("Введите текст")
+f.write(a)
+f.close()

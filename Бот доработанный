@@ -1,0 +1,67 @@
+import random
+import keyboard
+import time
+w=0
+b=0
+x=0
+y=0
+z=0
+per=["Привет","Расскажи историю","Что ты любишь делать","Запусти игру"]
+ad2=("Магазинчик моей соседки."+"Приходит она утром, открывает магазин,Проходит на кассу, и тут из недр выходит мужичок, кладёт на кассу пол бутылки коньяка и обёртку от шоколадки, просит пробить."+"Оказывается, продавщица его вечером не заметила и закрыла в магазине."+"Ругаться не стал, она извинилась, смеялись оба.")
+ad3=("Я люблю рисовать,читать и заниматься спортом")
+pl="Глупый"
+pl1="Надоел"
+pl2="Бесишь меня"
+ne1="Сам такой"
+ne2="Ты тоже"
+ne3="Отсань"
+while (1==1):
+    a=input()
+    if a==per[0]:
+        print("Привет")
+    if a==per[1]:
+        print(ad2)
+    if a==per[2]:
+        print(ad3)
+    if a==per[3]:
+        print("?")
+        while(w!=1):
+            w=int(input())
+        while(b!=1 and b!=2):
+            x=str(random.randint(1,3))
+            y=str(random.randint(1,3))
+            z=str(random.randint(1,3))
+            print(x+' '+y+' '+z+' ')
+            time.sleep(1)
+            if keyboard.is_pressed('space'):
+                if x==y and y==z and x==z:
+                    b=1
+                else:
+                    b=2
+        if b==1:
+            print('Вы выиграли')
+        elif b==2:
+            print('Вы проиграли')
+    if a==pl:
+        print(ne1)
+    if a==pl1:
+        print(ne2)
+    if a==pl2:
+        print(ne3)
+while(w!=1):
+    w=int(input())
+while(b!=1 and b!=2):
+    x=str(random.random(1,3))
+    y=str(random.random(1,3))
+    z=str(random.random(1,3))
+    print(x+' '+y+' '+z+' ')
+    time.sleep
+    if keyboard.is_pressed('space'):
+        if x==y and y==z and x==z:
+            b=1
+        else:
+            b=2
+if b==1:
+    print('Вы выиграли')
+elif b==2:
+    print('Вы проиграли')

@@ -1,0 +1,117 @@
+import random
+
+words=['а т л е т','б и л е т','о г о н ь','в а г о н','г р о з а','г е л и й','д р о б ь','л и ц е й','п а н д а','р а й о н','с у м м а','ю н к е р','я б е д а','я м щ и к','э с к и з','ч е р е п','ч а й к а','х и п п и','т у ф л и','р т у т ь','а в а н с','а в т о р','а г е н т','п а л а ч','п а с т а','п а д е ж','м а г и я','м а л я р','м а ф и я','м е с я ц']
+secret=['-','-','-','-','-']
+word=words[random.randint(0,19)].split(' ')
+mistakes=-1
+#print(word)
+bukva=input('Для начала игры введите единицу    ')
+wins=0
+
+while(mistakes!=8 and wins!=5):
+    if bukva==word[0]:
+        secret.pop(0)
+        secret.insert(0,word[0])
+        wins+=1
+    if bukva==word[1]:
+        secret.pop(1)
+        secret.insert(1,word[1])
+        wins+=1
+    if bukva==word[2]:
+        secret.pop(2)
+        secret.insert(2,word[2])
+        wins+=1
+    if bukva==word[3]:
+        secret.pop(3)
+        secret.insert(3,word[3])
+        wins+=1
+    if bukva==word[4]:
+        secret.pop(4)
+        secret.insert(4,word[4])
+        wins+=1
+    if bukva!=word[0] and bukva!=word[1] and bukva!=word[2] and bukva!=word[3] and bukva!=word[4]:
+        mistakes+=1
+
+    if mistakes==0:
+        print('         ')
+        print('         ')
+        print('         ')
+        print('         ')
+        print('         ')
+        print('         ')
+        print(' =========')
+    elif mistakes==1:
+        print('        +')
+        print('        |')
+        print('        |')
+        print('        |')
+        print('        |')
+        print('        |')
+        print(' =========')
+    elif mistakes==2:
+        print('    +---+')
+        print('        |')
+        print('        |')
+        print('        |')
+        print('        |')
+        print('        |')
+        print(' =========')
+    elif mistakes==3:
+        print('    +---+')
+        print('    |   |')
+        print('    O   |')
+        print('        |')
+        print('        |')
+        print('        |')
+        print(' =========')
+    elif mistakes==4:
+        print('    +---+')
+        print('    |   |')
+        print('    O   |')
+        print('    |   |')
+        print('        |')
+        print('        |')
+        print(' =========')
+    elif mistakes==5:
+        print('    +---+')
+        print('    |   |')
+        print('    O   |')
+        print('   /|   |')
+        print('        |')
+        print('        |')
+        print(' =========')
+    elif mistakes==6:
+        print('    +---+')
+        print('    |   |')
+        print('    O   |')
+        print('   /|\  |')
+        print('        |')
+        print('        |')
+        print(' =========')
+    elif mistakes==7:
+        print('    +---+')
+        print('    |   |')
+        print('    O   |')
+        print('   /|\  |')
+        print('   /    |')
+        print('        |')
+        print(' =========')
+    elif mistakes==8:
+        print('    +---+')
+        print('    |   |')
+        print('    O   |')
+        print('   /|\  |')
+        print('   / \  |')
+        print('        |')
+        print(' =========')
+    print(secret[0] + secret[1] + secret[2] + secret[3] + secret[4])
+    bukva=input('Введите букву   ')
+    #print(wins)
+    #print(mistakes)
+    
+if wins==5:
+    print('Вы выйграли!')
+    print('Загаданное слово:' + word[0] + word[1] + word[2] + word[3] + word[4])
+elif mistakes==8:
+    print('Вы проиграли.')
+    print('Загаданное слово:' + word[0] + word[1] + word[2] + word[3] + word[4])

@@ -1,0 +1,7 @@
+vg=["помидор","огурец","баклажан"]
+x=input("Добавь овощ-") 
+vg.append(x)
+print(vg)
+y=input("Добавь овощ-") 
+vg.append(y)
+print(vg)

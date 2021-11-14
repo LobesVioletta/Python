@@ -1,0 +1,11 @@
+a=int(input("Введи количество чисел: "))
+x=[]
+y=[]
+for i in range(a):
+    b= int(input("Введи числа: "))
+    if b>0:
+        x.append(b)
+    elif b<0:
+        y.append(b)
+print(len(x))
+print(len(y))

@@ -1,0 +1,10 @@
+a=int(input("Введи  количество чисел: ")) 
+sum=0
+c=[]
+for i in range(a):
+    b= int(input("Введи числа: "))
+    c.append(b)
+for i in range(len(c)):
+     sum=c[i]+sum
+print(sum)
+    

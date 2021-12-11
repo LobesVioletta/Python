@@ -1,0 +1,29 @@
+import keyboard
+import time
+a=[['0','0','0','0','0'],['0','0','0','0','0'],['0','0','0','0','0'],['0','0','0','0','0']]
+x=0
+ 
+while True:
+    a[0][x-1]='0'
+    a[0][x]='x'
+    x=x+1
+    if a[4][x]<'x':
+        x=0
+    if a[x][4]=='x':
+        a[x][0]='x' 
+    for i in a:
+        for j in i:
+            print(j,end=' ')
+        print()
+    print()
+   
+    for j in range(10):
+        time.sleep(0.1)
+        if (keyboard.is_pressed('left')):
+            x=x-1
+        if (keyboard.is_pressed('right')):
+            x=x+1 
+        if (keyboard.is_pressed('down')):
+            x=x-1
+        if (keyboard.is_pressed('up')):
+            x=x+1 

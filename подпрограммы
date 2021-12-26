@@ -1,0 +1,17 @@
+def das():
+    s=input()
+    let=0
+    sp=0
+    n=0
+    for a  in s:
+        if (a>='a' and a<='z')or (a>='A' and a<='Z'):
+             let+=1
+        elif a in['1','2','3','4','5','6','7','8','9','0']:
+             n+=1
+        elif a in '!+#$%^&*()':
+             sp+=1
+    if let>0 and sp>0 and n>0:
+        print("Пароль верный")
+    else:
+       print("Пароль неверный") 
+das()

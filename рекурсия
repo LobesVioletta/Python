@@ -1,0 +1,9 @@
+a=int(input())
+b=int(input())
+def q(a,b):
+    print(a)
+    if a>b:
+        q(a-1,b)
+    elif a<b:
+        q(a+1,b)
+q(a,b)

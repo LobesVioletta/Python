@@ -1,0 +1,27 @@
+import myLib
+import random
+myLib.vyvodPolya(myLib.vidimost_polya)
+while True:
+    stroka=int(input("Введите номер строки: "))
+    stolb=int(input("Введите номер столбца: "))
+    if stroka<1 or stroka>12:
+         input("Данного значения не существует")
+    elif  stolb<1 or stolb>12:
+         input("Данного значения не существует")
+def mina():
+    for i in range(3):
+        mina[random],[random]=='%'
+        
+    
+    
+
+    
+game = True
+while game:
+    stroka=int(input("Введите номер строки: "))
+    stolb=int(input("Введите номер столбца: "))
+    myLib.check(stroka-1,stolb-1)
+    myLib.vyvodPolya(myLib.vidimost_polya)
+    if myLib.isOpen():
+        game = False
+print("Всё поле открыто!")

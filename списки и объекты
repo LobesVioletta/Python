@@ -1,0 +1,34 @@
+class Student:
+    def __init__(self,f,i,n,y):
+        self.fam=f
+        self.name=i
+        self.nomber=n
+        self.mark=y
+    def inform(self):
+        print(self.fam,self.name,self.nomber,self.mark)
+            
+            
+h1=Student("Иванов", "Ф.С", 3, 4.75)
+h2=Student('Дмитриева','О.Г',1,4.25)
+h3=Student('Петров','А.Ф',7,3.13)
+h4=Student('Сидорова','М.Н',6,3.41)
+h5=Student('Облецов','А.А',8,4.67)
+h6=Student('Рыбалко','С.Е',2,4.90)
+h7=Student('Лобес','В.А',2,5.00)
+h8=Student('Черкашин','П.Д',1,4.33)
+h9=Student('Лебедев','В.М',8,3.00)
+h10=Student('Морякина','А.Р',7,4.50)
+st=[]
+st.append(h1)
+st.append(h2)
+st.append(h3)
+st.append(h4)
+st.append(h5)
+st.append(h6)
+st.append(h7)
+st.append(h8)
+st.append(h9)
+st.append(h10)
+for i in range(len(st)):
+    if st[i].mark>4:
+        st[i].inform()

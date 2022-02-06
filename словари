@@ -1,0 +1,46 @@
+chel={"имя":"Саша","фамилия":"Иванов","отчество":"Петрович","суперсила":"Суперзрение","группа крови":5,"слабость":"Слепой"}
+def chat():
+    name=input()
+    if name=="имя":
+         print('Введите имя: ')
+         name=input()
+         chel['имя']=name
+    if name=="фамилия":
+         print('Введите фамилию: ')
+         name=input()
+         chel['фамилия']=name
+    if name=="отчество":
+         print('Введите отчество: ')
+         name=input()
+         chel['отчество']=name
+    if name=="суперсила":
+         print('Введите суперсилу: ')
+         name=input()
+         chel['суперсила']=name
+    if name=="группа крови":
+         print('Введите группу крови: ')
+         name=input()
+         chel['игруппа крови']=name
+    if name=="слабость":
+         print('Введите слабость: ')
+         name=input()
+         chel['слабость']=name
+print("Введите имя")
+name=input()
+chel['имя']=name
+print("Введите фамилию")
+name=input()
+chel['фамилия']=name
+print("Введите отчество")
+name=input()
+chel['отчество']=name
+print("Введите суперсилу")
+name=input()
+chel['суперсила']=name
+print("Введите группу крови")
+name=input()
+chel['группа крови']=name
+print("Введите слабость")
+name=input()
+chel['слабость']=name
+chat()

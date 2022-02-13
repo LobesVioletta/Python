@@ -1,0 +1,72 @@
+d={"имя":"Саша","фамилия":"Иванов","отчество":"Петрович","предмет":"алгебра","оценка":5}
+def rs():
+    name=input()
+    if name=="имя":
+         print('Введите имя: ')
+         name=input()
+         d['имя']=name
+    if name=="фамилия":
+         print('Введите фамилию: ')
+         name=input()
+         d['фамилия']=name
+    if name=="отчество":
+         print('Введите отчество: ')
+         name=input()
+         d['отчество']=name
+print("Введите имя")
+name=input()
+d['имя']=name
+print("Введите фамилию")
+name=input()
+d['фамилия']=name
+print("Введите отчество")
+name=input()
+d['отчество']=name
+rs()
+for i in range(5):
+    if name=="предмет":
+         print('Введите предмет: ')
+         name=input()
+         d['предмет']=name
+    d['предмет']=name
+    print("Введите предмет")
+    name=input()
+for i in range(5):
+    if name=="оценка":
+         print('Введите оценку: ')
+         name=int(input())
+         d['оценка']=name
+    d['оценка']=name
+    print("Введите оценку")
+    name=int(input())
+def a():
+    print("Что вы хотите добавить?")
+    new=input()
+    print("Что записать в",new)
+    start=input()
+    d[new]=start
+def lst():
+    print(d)
+def b():
+    print("Что вы хотите изменить?")
+    new=input()
+    if new=="имя":
+        print("Введите новое имя ")
+        new=input()
+        d["имя"]=new
+    if new=="фамилия":
+        print("Введите новую фамилию ")
+        new=input()
+        d["фамилия"]=new
+    if new=="отчество":
+        print("Введите новое отчество ")
+        new=input()
+        d["отчество"]=new
+    if new=="предмет":
+        print("Введите новый предмет ")
+        new=input()
+        d["предмет"]=new
+    if new=="оценка":
+        print("Введите новую оценку ")
+        new=input()
+        d["оценка"]=new

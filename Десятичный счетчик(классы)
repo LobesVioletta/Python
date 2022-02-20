@@ -1,0 +1,28 @@
+class Num:
+    def __init__(self, a):
+        self.a = a
+        
+    def bol(self):
+            if self.a==9:
+                print("Предел знчений")
+            elif self.a<9 and self.a>0:
+                self.a =self.a+1
+                print(self.a)
+        
+    def mel(self):
+            if self.a==0:
+                print("Предел значений")
+            elif self.a>0 and self.a<9:
+                self.a =self.a-1
+                print(self.a)
+def fun(num):
+        b=input("Прибавить/Отнять: ")
+        if b=="Прибавить":
+            num.bol()
+        elif b=="Отнять":
+            num.mel()
+ 
+num=Num(5)
+while True:
+    fun(num)
+        

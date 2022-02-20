@@ -1,0 +1,21 @@
+class Num():
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    def vyvod(self):
+        print(self.a,self.b)
+    def ip(self):
+        self.a=float(input("Введите первое  число: "))
+        self.b=float(input("Введите второе число: "))
+    def sum(self):
+        print(self.a+self.b)
+    def bol(self):
+        if self.a>self.b:
+            print(self.a)
+        else:
+            print(self.b)
+num = Num(1, 5)
+num.vyvod()
+num.ip()
+num.sum()
+num.bol()

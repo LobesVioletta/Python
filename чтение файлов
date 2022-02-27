@@ -1,0 +1,4 @@
+file=open("file.txt",'r')
+text=file.readline()
+file.close()
+print(text)

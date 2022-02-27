@@ -1,0 +1,23 @@
+def reg(q):
+    x=input("Введите логин: ")
+    y=input("Введите пароль: ")
+    file=open('file.txt','a')
+    file.write(x+' '+y)
+    file.close()
+
+def aft(q):
+    a=input("Введите логин: ")
+    b=input("Введите пароль: ")
+    file=open('file.txt','r')
+    text=file.readline().split(' ')
+    file.close()
+    if a==text[0] and b==text[1]:
+        print("Авторизация завершена")
+    else:
+        print("Неверный логин или пароль")
+
+q=input("Регистрация или Авторизация: ")
+if q=='Регистрация':
+    reg(q)
+elif q=="Авторизация":
+    aft(q)

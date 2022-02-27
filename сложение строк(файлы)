@@ -1,0 +1,5 @@
+file=open("file.txt",'r')
+text=int(file.readline())
+f=int(file.readline())
+file.close()
+print(text+f)

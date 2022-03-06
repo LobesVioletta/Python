@@ -1,0 +1,57 @@
+st=[]
+class Student:
+    def __init__(self,f,i,y):
+        self.fam=f
+        self.name=i
+        self.mark=y
+    def inform(self):
+        f=open("file.txt",'a')
+        f.write(self.fam+" "+ self.name+" "+self.mark+" \n")
+        f.close()
+        
+def base():
+    global st
+    h1=Student("Иванов", "Ф.С",'3')
+    h2=Student('Дмитриева','О.Г','4')
+    h3=Student('Петров','А.Ф','5')
+    h4=Student('Сидорова','М.Н','4')
+    h5=Student('Облецов','А.А','3')
+    h6=Student('Рыбалко','С.Е','4')
+    h7=Student('Лобес','В.А','5')
+    h8=Student('Черкашин','П.Д','3')
+    h9=Student('Лебедев','В.М','4')
+    h10=Student('Морякина','А.Р','5')
+    st.append(h1)
+    st.append(h2)
+    st.append(h3)
+    st.append(h4)
+    st.append(h5)
+    st.append(h6)
+    st.append(h7)
+    st.append(h8)
+    st.append(h9)
+    st.append(h10)
+    for i in range(len(st)):
+            st[i].inform()
+def add():
+       global st
+       s=input("Введите фамилию ")
+       d=input("Введите имя ")
+       f=input("Введите оценку ")
+       h11=Student(s,d,f)
+       st.append(h11)
+       st[len(st)-1].inform()
+
+def a():
+    print("Что вы хотите сделать?")
+    start=input()
+    if start == "посмотреть":
+        base()
+    elif start == "добавить":
+        add()
+    elif start=="удалить":
+        dell()
+def lst():
+    print(f)
+
+a()

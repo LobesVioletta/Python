@@ -1,0 +1,116 @@
+import random
+class Game:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+        self.word=['а т л е т','б и л е т','о г о н ь','в а г о н','г р о з а','г е л и й','д р о б ь','л и ц е й','п а н д а','р а й о н','с у м м а','ю н к е р','я б е д а','я м щ и к','э с к и з','ч е р е п','ч а й к а','х и п п и','т у ф л и','р т у т ь','а в а н с','а в т о р','а г е н т','п а л а ч','п а с т а','п а д е ж','м а г и я','м а л я р','м а ф и я','м е с я ц']
+        self.c=['-','-','-','-','-']
+    def words(self):
+        word=self.word[random.randint(0,19)].split(' ')
+        while(self.a!=8 and self.b!=5):
+            d=input("Введите букву: ")
+            if d == word[0]:
+                self.c.pop(0)
+                self.c.insert(0,word[0])
+                self.b+=1
+            if d==word[1]:
+                self.c.pop(1)
+                self.c.insert(1,word[1])
+                self.b+=1
+            if d==word[2]:
+                self.c.pop(2)
+                self.c.insert(2,word[2])
+                self.b+=1
+            if d==word[3]:
+                self.c.pop(3)
+                self.c.insert(3,word[3])
+                self.b+=1
+            if d==word[4]:
+                self.c.pop(4)
+                self.c.insert(4,word[4])
+                self.b+=1
+            if d!=word[0] and d!=word[1] and d!=word[2] and d!=word[3] and d!=word[4]:
+                self.a+=1
+            print(self.c)
+    def mis(self):
+        if self.a==0:
+            print('         ')
+            print('         ')
+            print('         ')
+            print('         ')
+            print('         ')
+            print('         ')
+            print(' =========')
+        elif self.a==1:
+            print('        +')
+            print('        |')
+            print('        |')
+            print('        |')
+            print('        |')
+            print('        |')
+            print(' =========')
+        elif self.a==2:
+            print('    +---+')
+            print('        |')
+            print('        |')
+            print('        |')
+            print('        |')
+            print('        |')
+            print(' =========')
+        elif self.a==3:
+            print('    +---+')
+            print('    |   |')
+            print('    O   |')
+            print('        |')
+            print('        |')
+            print('        |')
+            print(' =========')
+        elif self.a==4:
+            print('    +---+')
+            print('    |   |')
+            print('    O   |')
+            print('    |   |')
+            print('        |')
+            print('        |')
+            print(' =========')
+        elif self.a==5:
+            print('    +---+')
+            print('    |   |')
+            print('    O   |')
+            print('   /|   |')
+            print('        |')
+            print('        |')
+            print(' =========')
+        elif self.a==6:
+            print('    +---+')
+            print('    |   |')
+            print('    O   |')
+            print('   /|\  |')
+            print('        |')
+            print('        |')
+            print(' =========')
+        elif self.a==7:
+            print('    +---+')
+            print('    |   |')
+            print('    O   |')
+            print('   /|\  |')
+            print('   /    |')
+            print('        |')
+            print(' =========')
+        elif self.a==8:
+            print('    +---+')
+            print('    |   |')
+            print('    O   |')
+            print('   /|\  |')
+            print('   / \  |')
+            print('        |')
+            print(' =========')
+g=Game(0,0)
+g.mis()
+g.words()
+if g.b==5:
+    print('Вы выйграли!')
+    print('Загаданное слово:' + g.word[0] + g.word[1] + g.word[2] + g.word[3] + g.word[4])
+elif g.a==8:
+    print('Вы проиграли.')
+    print('Загаданное слово:' + g.word[0] + g.word[1] + g.word[2] + g.word[3] + g.word[4])
